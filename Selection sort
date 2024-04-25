@@ -1,3 +1,4 @@
+선택 정렬 오름차순 정렬
 #include <iostream>
 using namespace std;
 
