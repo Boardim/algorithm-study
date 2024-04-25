@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+void selectionSort(int arr[], int n) {
+	int min,temp;
+	for (int i = 0; i < n-1; i++) {
+		/*
+		for (int j = 0; j < 5; j++) {
+			cout << arr[j] << " ";
+		}
+		cout << endl;
+		정렬 과정 */
+		min = arr[i];
+		temp = i;
+		for (int k = i+1; k < n; k++) {
+			if (arr[k] < min) {
+				min = arr[k];
+				temp = k;
+			}
+		}
+		arr[temp] = arr[i];
+		arr[i] = min;
+	}
+}
+int main() {
+	int arr[5] = { 5,2,3,9,7};
+	selectionSort(arr, 5);
+	cout << "result: ";
+	for (int i = 0; i < 5; i++) {
+		cout << arr[i] << " ";
+	}
+}
